@@ -23,7 +23,7 @@
 import Foundation
 import CoreData
 
-class Run: NSManagedObject {
+class Ride: NSManagedObject {
 
     @NSManaged var duration: NSNumber
     @NSManaged var distance: NSNumber

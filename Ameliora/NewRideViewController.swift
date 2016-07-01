@@ -25,12 +25,12 @@ import CoreData
 import CoreLocation
 import HealthKit
 
-let DetailSegueName = "RunDetails"
+let DetailSegueName = "RideDetails"
 
-class NewRunViewController: UIViewController {
+class NewRideViewController: UIViewController {
     var managedObjectContext: NSManagedObjectContext?
 
-    var run: Run!
+    var ride: Ride!
 
     @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -103,18 +103,18 @@ class NewRunViewController: UIViewController {
         locations.removeAll(keepCapacity: false)
         timer = NSTimer.scheduledTimerWithTimeInterval(1,
                                                        target: self,
-                                                       selector: #selector(NewRunViewController.eachSecond(_:)),
+                                                       selector: #selector(NewRideViewController.eachSecond(_:)),
                                                        userInfo: nil,
                                                        repeats: true)
         startLocationUpdates()
     }
     
-    func saveRun() {
-        let savedRun = NSEntityDescription.insertNewObjectForEntityForName("Run",
-                                                                           inManagedObjectContext: managedObjectContext!) as! Run
-        savedRun.distance = distance
-        savedRun.duration = seconds
-        savedRun.timestamp = NSDate()
+    func saveRide() {
+        let savedRide = NSEntityDescription.insertNewObjectForEntityForName("Ride",
+                                                                           inManagedObjectContext: managedObjectContext!) as! Ride
+        savedRide.distance = distance
+        savedRide.duration = seconds
+        savedRide.timestamp = NSDate()
         
         var savedLocations = [Location]()
         for location in locations {
@@ -126,35 +126,35 @@ class NewRunViewController: UIViewController {
             savedLocations.append(savedLocation)
         }
         
-        savedRun.locations = NSOrderedSet(array: savedLocations)
-        run = savedRun
+        savedRide.locations = NSOrderedSet(array: savedLocations)
+        ride = savedRide
         
         do {
             try managedObjectContext!.save()
         } catch _ {
-            print("Could not save the run!")
+            print("Could not save the ride!")
         }
     }
 
     @IBAction func stopPressed(sender: AnyObject) {
-        let actionSheet = UIActionSheet(title: "Run Stopped", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Save", "Discard")
+        let actionSheet = UIActionSheet(title: "Ride Stopped", delegate: self, cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: "Save", "Discard")
         actionSheet.actionSheetStyle = .Default
         actionSheet.showInView(view)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let detailViewController = segue.destinationViewController as? DetailViewController {
-          detailViewController.run = run
+          detailViewController.ride = ride
         }
     }
 }
 
 // MARK: UIActionSheetDelegate
-extension NewRunViewController: UIActionSheetDelegate {
+extension NewRideViewController: UIActionSheetDelegate {
   func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
     //save
     if buttonIndex == 1 {
-      saveRun()
+      saveRide()
       performSegueWithIdentifier(DetailSegueName, sender: nil)
     }
       //discard
@@ -165,7 +165,7 @@ extension NewRunViewController: UIActionSheetDelegate {
 }
 
 // MARK: - CLLocationManagerDelegate
-extension NewRunViewController: CLLocationManagerDelegate {
+extension NewRideViewController: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         for location in locations as [CLLocation] {
             if location.horizontalAccuracy < 20 {

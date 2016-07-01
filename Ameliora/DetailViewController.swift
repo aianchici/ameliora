@@ -25,7 +25,7 @@ import MapKit
 import HealthKit
 
 class DetailViewController: UIViewController {
-  var run: Run!
+  var ride: Ride!
 
   @IBOutlet weak var mapView: MKMapView!
   @IBOutlet weak var distanceLabel: UILabel!
@@ -39,31 +39,31 @@ class DetailViewController: UIViewController {
   }
 
     func configureView() {
-        let distanceQuantity = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: run.distance.doubleValue)
+        let distanceQuantity = HKQuantity(unit: HKUnit.meterUnit(), doubleValue: ride.distance.doubleValue)
         distanceLabel.text = "Distance: " + distanceQuantity.description
 
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .MediumStyle
-        dateLabel.text = dateFormatter.stringFromDate(run.timestamp)
+        dateLabel.text = dateFormatter.stringFromDate(ride.timestamp)
 
-        let secondsQuantity = HKQuantity(unit: HKUnit.secondUnit(), doubleValue: run.duration.doubleValue)
+        let secondsQuantity = HKQuantity(unit: HKUnit.secondUnit(), doubleValue: ride.duration.doubleValue)
         timeLabel.text = "Time: " + secondsQuantity.description
 
         let paceUnit = HKUnit.secondUnit().unitDividedByUnit(HKUnit.meterUnit())
-        let paceQuantity = HKQuantity(unit: paceUnit, doubleValue: run.duration.doubleValue / run.distance.doubleValue)
+        let paceQuantity = HKQuantity(unit: paceUnit, doubleValue: ride.duration.doubleValue / ride.distance.doubleValue)
         paceLabel.text = "Pace: " + paceQuantity.description
         loadMap()
     }
     
     func mapRegion() -> MKCoordinateRegion {
-        let initialLoc = run.locations.firstObject as! Location
+        let initialLoc = ride.locations.firstObject as! Location
         
         var minLat = initialLoc.latitude.doubleValue
         var minLng = initialLoc.longitude.doubleValue
         var maxLat = minLat
         var maxLng = minLng
         
-        let locations = run.locations.array as! [Location]
+        let locations = ride.locations.array as! [Location]
         
         for location in locations {
             minLat = min(minLat, location.latitude.doubleValue)
@@ -94,17 +94,17 @@ class DetailViewController: UIViewController {
     func polyline() -> MKPolyline {
         var coords = [CLLocationCoordinate2D]()
         
-        let locations = run.locations.array as! [Location]
+        let locations = ride.locations.array as! [Location]
         for location in locations {
             coords.append(CLLocationCoordinate2D(latitude: location.latitude.doubleValue,
                 longitude: location.longitude.doubleValue))
         }
         
-        return MKPolyline(coordinates: &coords, count: run.locations.count)
+        return MKPolyline(coordinates: &coords, count: ride.locations.count)
     }
     
     func loadMap() {
-        if run.locations.count > 0 {
+        if ride.locations.count > 0 {
             mapView.hidden = false
             
             // Set the map bounds
@@ -117,7 +117,7 @@ class DetailViewController: UIViewController {
             mapView.hidden = true
             
             UIAlertView(title: "Error",
-                        message: "Sorry, this run has no locations saved",
+                        message: "Sorry, this ride has no locations saved",
                         delegate:nil,
                         cancelButtonTitle: "OK").show()
         }

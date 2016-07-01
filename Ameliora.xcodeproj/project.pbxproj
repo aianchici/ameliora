@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78CE0D651AFBEA53009BBE75 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE0D641AFBEA53009BBE75 /* Location.swift */; };
-		78CE0D671AFBEA54009BBE75 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE0D661AFBEA54009BBE75 /* Run.swift */; };
+		78CE0D671AFBEA54009BBE75 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CE0D661AFBEA54009BBE75 /* Ride.swift */; };
 		870F82631A24E70F00776E2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F82621A24E70F00776E2F /* AppDelegate.swift */; };
 		870F82661A24E70F00776E2F /* Ameliora.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 870F82641A24E70F00776E2F /* Ameliora.xcdatamodeld */; };
 		870F826A1A24E70F00776E2F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F82691A24E70F00776E2F /* DetailViewController.swift */; };
@@ -19,8 +19,9 @@
 		872189281AA2A43E00C63008 /* badges.json in Resources */ = {isa = PBXBuildFile; fileRef = 872189271AA2A43E00C63008 /* badges.json */; };
 		8721892A1AA2A46100C63008 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 872189291AA2A46100C63008 /* success.wav */; };
 		8739A7161A9B80B4001FE88E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8739A7131A9B8092001FE88E /* MapKit.framework */; };
-		874B42151A9C344500081A45 /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874B42141A9C344500081A45 /* NewRunViewController.swift */; };
+		874B42151A9C344500081A45 /* NewRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874B42141A9C344500081A45 /* NewRideViewController.swift */; };
 		8772AB5B1A26347A00613309 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8772AB591A26347A00613309 /* HomeViewController.swift */; };
+		FAF43EC71D26475400B005CA /* bicycle-159276_960_720.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF43EC61D26475400B005CA /* bicycle-159276_960_720.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		78CE0D641AFBEA53009BBE75 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		78CE0D661AFBEA54009BBE75 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		78CE0D661AFBEA54009BBE75 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		870F825D1A24E70F00776E2F /* Ameliora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ameliora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		870F82611A24E70F00776E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		870F82621A24E70F00776E2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,8 +51,9 @@
 		872189271AA2A43E00C63008 /* badges.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = badges.json; sourceTree = "<group>"; };
 		872189291AA2A46100C63008 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		8739A7131A9B8092001FE88E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		874B42141A9C344500081A45 /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
+		874B42141A9C344500081A45 /* NewRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRideViewController.swift; sourceTree = "<group>"; };
 		8772AB591A26347A00613309 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FAF43EC61D26475400B005CA /* bicycle-159276_960_720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bicycle-159276_960_720.png"; path = "../../../Downloads/bicycle-159276_960_720.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,7 @@
 		78CE0D631AFBEA36009BBE75 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				78CE0D661AFBEA54009BBE75 /* Run.swift */,
+				78CE0D661AFBEA54009BBE75 /* Ride.swift */,
 				78CE0D641AFBEA53009BBE75 /* Location.swift */,
 			);
 			name = Models;
@@ -107,7 +109,7 @@
 				78CE0D631AFBEA36009BBE75 /* Models */,
 				870F82621A24E70F00776E2F /* AppDelegate.swift */,
 				8772AB591A26347A00613309 /* HomeViewController.swift */,
-				874B42141A9C344500081A45 /* NewRunViewController.swift */,
+				874B42141A9C344500081A45 /* NewRideViewController.swift */,
 				870F82691A24E70F00776E2F /* DetailViewController.swift */,
 				870F826B1A24E70F00776E2F /* Main.storyboard */,
 				870F82641A24E70F00776E2F /* Ameliora.xcdatamodeld */,
@@ -121,6 +123,7 @@
 		870F82601A24E70F00776E2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FAF43EC61D26475400B005CA /* bicycle-159276_960_720.png */,
 				872189291AA2A46100C63008 /* success.wav */,
 				872189271AA2A43E00C63008 /* badges.json */,
 				870F82611A24E70F00776E2F /* Info.plist */,
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8721892A1AA2A46100C63008 /* success.wav in Resources */,
+				FAF43EC71D26475400B005CA /* bicycle-159276_960_720.png in Resources */,
 				870F826D1A24E70F00776E2F /* Main.storyboard in Resources */,
 				872189281AA2A43E00C63008 /* badges.json in Resources */,
 				870F82721A24E70F00776E2F /* LaunchScreen.xib in Resources */,
@@ -264,12 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				874B42151A9C344500081A45 /* NewRunViewController.swift in Sources */,
+				874B42151A9C344500081A45 /* NewRideViewController.swift in Sources */,
 				870F82661A24E70F00776E2F /* Ameliora.xcdatamodeld in Sources */,
 				870F82631A24E70F00776E2F /* AppDelegate.swift in Sources */,
 				870F826A1A24E70F00776E2F /* DetailViewController.swift in Sources */,
 				78CE0D651AFBEA53009BBE75 /* Location.swift in Sources */,
-				78CE0D671AFBEA54009BBE75 /* Run.swift in Sources */,
+				78CE0D671AFBEA54009BBE75 /* Ride.swift in Sources */,
 				8772AB5B1A26347A00613309 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -49,18 +49,18 @@
                                     <segue destination="eTK-aJ-0pg" kind="show" id="GRk-Xw-9Zz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBi-wt-Ei6">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBi-wt-Ei6" userLabel="Past Rides">
                                 <rect key="frame" x="36" y="384" width="528" height="88"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Past Runs" backgroundImage="blue-btn">
+                                <state key="normal" title="Past Rides" backgroundImage="blue-btn">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywk-fA-rsi">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywk-fA-rsi" userLabel="New Ride">
                                 <rect key="frame" x="36" y="276" width="528" height="88"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="New Run" backgroundImage="green-btn">
+                                <state key="normal" title="New Ride" backgroundImage="green-btn">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="567" y="64"/>
         </scene>
-        <!--New Run-->
+        <!--New Ride-->
         <scene sceneID="hW2-je-NoA">
             <objects>
-                <viewController title="New Run" id="HWb-Gp-C7s" customClass="NewRunViewController" customModule="Ameliora" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="New Ride" id="HWb-Gp-C7s" customClass="NewRideViewController" customModule="Ameliora" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3Bn-kN-Hn4"/>
                         <viewControllerLayoutGuide type="bottom" id="OvH-G5-d73"/>
@@ -183,7 +183,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="New Run" id="Eef-8o-k36"/>
+                    <navigationItem key="navigationItem" title="New Ride" id="Eef-8o-k36" userLabel="New Ride"/>
                     <connections>
                         <outlet property="distanceLabel" destination="Ldw-Fa-Ji4" id="Fua-9L-fuk"/>
                         <outlet property="paceLabel" destination="XE4-hw-Nvy" id="dh5-SI-gcP"/>
@@ -191,7 +191,7 @@
                         <outlet property="startButton" destination="ZF7-2I-IAm" id="HD1-uf-JAf"/>
                         <outlet property="stopButton" destination="VJ9-OY-8eI" id="Z4t-K0-sRF"/>
                         <outlet property="timeLabel" destination="ljO-dL-wjw" id="DP0-e4-rDN"/>
-                        <segue destination="Ah7-4n-0Wa" kind="show" identifier="RunDetails" id="DPs-eP-Qdu"/>
+                        <segue destination="Ah7-4n-0Wa" kind="show" identifier="RideDetails" id="DPs-eP-Qdu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44d-jh-T4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -474,7 +474,7 @@
                             <constraint firstItem="Y8J-x5-27h" firstAttribute="top" secondItem="yF8-fr-X1f" secondAttribute="bottom" constant="10" id="xTu-TN-VfA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Run Details" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="Ride Details" id="cra-N8-TIN" userLabel="Ride Details"/>
                     <connections>
                         <outlet property="dateLabel" destination="XPH-A2-7yQ" id="C35-IF-kVb"/>
                         <outlet property="distanceLabel" destination="Y8J-x5-27h" id="d5T-BV-G8v"/>
