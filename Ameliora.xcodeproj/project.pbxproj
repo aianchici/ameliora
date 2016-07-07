@@ -22,6 +22,9 @@
 		874B42151A9C344500081A45 /* NewRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874B42141A9C344500081A45 /* NewRideViewController.swift */; };
 		8772AB5B1A26347A00613309 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8772AB591A26347A00613309 /* HomeViewController.swift */; };
 		FAF43EC71D26475400B005CA /* bicycle-159276_960_720.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF43EC61D26475400B005CA /* bicycle-159276_960_720.png */; };
+		FAF43EC91D2761BA00B005CA /* MulticolourPolylineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF43EC81D2761BA00B005CA /* MulticolourPolylineSegment.swift */; };
+		FAF43ECB1D2E0CFA00B005CA /* RideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF43ECA1D2E0CFA00B005CA /* RideCell.swift */; };
+		FAF43ECD1D2E0D0D00B005CA /* RidesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF43ECC1D2E0D0D00B005CA /* RidesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		874B42141A9C344500081A45 /* NewRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRideViewController.swift; sourceTree = "<group>"; };
 		8772AB591A26347A00613309 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FAF43EC61D26475400B005CA /* bicycle-159276_960_720.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bicycle-159276_960_720.png"; path = "../../../Downloads/bicycle-159276_960_720.png"; sourceTree = "<group>"; };
+		FAF43EC81D2761BA00B005CA /* MulticolourPolylineSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticolourPolylineSegment.swift; sourceTree = "<group>"; };
+		FAF43ECA1D2E0CFA00B005CA /* RideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideCell.swift; sourceTree = "<group>"; };
+		FAF43ECC1D2E0D0D00B005CA /* RidesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RidesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 				78CE0D631AFBEA36009BBE75 /* Models */,
 				870F82621A24E70F00776E2F /* AppDelegate.swift */,
 				8772AB591A26347A00613309 /* HomeViewController.swift */,
+				FAF43EC81D2761BA00B005CA /* MulticolourPolylineSegment.swift */,
+				FAF43ECA1D2E0CFA00B005CA /* RideCell.swift */,
+				FAF43ECC1D2E0D0D00B005CA /* RidesTableViewController.swift */,
 				874B42141A9C344500081A45 /* NewRideViewController.swift */,
 				870F82691A24E70F00776E2F /* DetailViewController.swift */,
 				870F826B1A24E70F00776E2F /* Main.storyboard */,
@@ -270,11 +279,14 @@
 			files = (
 				874B42151A9C344500081A45 /* NewRideViewController.swift in Sources */,
 				870F82661A24E70F00776E2F /* Ameliora.xcdatamodeld in Sources */,
+				FAF43EC91D2761BA00B005CA /* MulticolourPolylineSegment.swift in Sources */,
 				870F82631A24E70F00776E2F /* AppDelegate.swift in Sources */,
 				870F826A1A24E70F00776E2F /* DetailViewController.swift in Sources */,
 				78CE0D651AFBEA53009BBE75 /* Location.swift in Sources */,
 				78CE0D671AFBEA54009BBE75 /* Ride.swift in Sources */,
+				FAF43ECB1D2E0CFA00B005CA /* RideCell.swift in Sources */,
 				8772AB5B1A26347A00613309 /* HomeViewController.swift in Sources */,
+				FAF43ECD1D2E0D0D00B005CA /* RidesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

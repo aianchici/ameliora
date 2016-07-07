@@ -32,5 +32,21 @@ class HomeViewController: UIViewController {
         newRideViewController.managedObjectContext = managedObjectContext
       }
     }
+    else if segue.destinationViewController.isKindOfClass(RidesTableViewController) {
+        let fetchRequest = NSFetchRequest(entityName: "Ride")
+        
+        let sortDescriptor = NSSortDescriptor(key: "timestamp", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let rides: [Ride]!
+        do {
+            rides = try managedObjectContext!.executeFetchRequest(fetchRequest) as! [Ride]
+        } catch _ {
+            rides = nil
+        }
+        
+        let ridesTableViewController = segue.destinationViewController as! RidesTableViewController
+        ridesTableViewController.ridesArray = rides
+    }
   }
 }
